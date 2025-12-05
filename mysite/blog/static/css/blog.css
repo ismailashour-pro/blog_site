@@ -1,0 +1,104 @@
+/* عام */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #4ca6da; /* لون بيج فاتح */
+    color: #2e77b3; /* بني غامق */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* الشريط الجانبي */
+#sidebar {
+    background: #3368da; /* بني متوسط */
+    color: #1874ca; /* بيج فاتح */
+    padding: 30px 20px;
+    width: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 8px rgba(92, 153, 168, 0.1);
+}
+
+#sidebar h2 {
+    margin-top: 0;
+    font-weight: 700;
+}
+
+#sidebar p {
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* روابط في الشريط الجانبي */
+#sidebar a {
+    color: #01131d;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+#sidebar a:hover {
+    color: #000000;
+}
+
+/* المحتوى الرئيسي */
+#content {
+    background: #e0e6e9; /* بيج فاتح جدًا */
+    flex-grow: 1;
+    padding: 40px 50px;
+    box-shadow: -2px 0 8px rgba(97, 184, 206, 0.05);
+    border-radius: 0 10px 10px 0;
+    max-width: 900px;
+    margin: 30px;
+}
+
+/* عنوان المدونة */
+h1 {
+    color: #024b4d;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* عنوان البوست */
+h2 {
+    color: #136fac;
+    margin-bottom: 10px;
+}
+
+h2 a {
+    text-decoration: none;
+    color: #35717c;
+    transition: color 0.3s ease;
+}
+
+h2 a:hover {
+    color: #3794ac;
+}
+
+/* تاريخ واسم الكاتب */
+.date {
+    font-size: 0.9rem;
+    color: #012330;
+    margin-bottom: 15px;
+}
+
+/* نص البوست */
+p, .post-body {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #6dc3dd;
+}
+
+/* الروابط داخل المحتوى */
+a {
+    color: #5ea1df;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
