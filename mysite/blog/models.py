@@ -15,7 +15,7 @@ class Post(models.Model):
 
 
     titel = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100)
+    slug = models.SlugField(max_length=100 , unique_for_date='publish')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
@@ -34,4 +34,7 @@ class Post(models.Model):
         return self.titel
     
     def get_absolute_url(self):
-        return reverse("blog:post_detail", args=[self.id])
+        return reverse("blog:post_detail", args=[self.publish.year,
+                                                self.publish.month,
+                                                self.publish.day,
+                                                self.slug])
